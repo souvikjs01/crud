@@ -1,6 +1,5 @@
 import ListPost from "@/components/ListPost";
 import PostForm from "@/components/PostForm";
-export const runtime = "edge";
 
 export default function Home() {
   return (

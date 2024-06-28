@@ -9,11 +9,8 @@ export const createPost = async (values: PostSchemaType) => {
     if(!validatedField.success){
         return {error: 'Invalid fields'}
     }
-    console.log('hi there');
     const { title } = validatedField.data
     try {
-        
-        
         await prismadb.post.create({
             data: {
                 title
@@ -34,7 +31,7 @@ export const getPosts = async () => {
             }
         })
         return {success: posts}
-    } catch (error) {
+    } catch (error) {        
         return {error: 'Internal server error'}
     }
 }
