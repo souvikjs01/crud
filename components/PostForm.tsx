@@ -27,7 +27,7 @@ const PostForm = ({post, closeEditHandler}: {post?: Post, closeEditHandler?: () 
         }, 2000)
         return () => clearTimeout(timer)
       }
-    }, [success])
+    }, [success, form])
     
     const onSubmit = (data: PostSchemaType)=> {
       setLoading(true)
